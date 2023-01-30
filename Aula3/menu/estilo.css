@@ -1,0 +1,76 @@
+
+body {
+  overflow-x: hidden;
+}
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color:rgb(118, 118, 235);
+  padding: 10px 20px;
+}
+
+#lista-menu ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+#lista-menu ul li a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+#burger {
+  cursor: pointer;
+  display: none;
+}
+#burger div {
+  background-color: rgb(204, 74, 128);
+  width: 26px;
+  height: 3px;
+  margin: 3px 0;
+}
+#lista-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+    transform: translateX(100%);
+    transition: 0.5s;
+  }
+  #lista-menu ul li {
+    background-color: rgb(115, 68, 168);
+    width: 100%;
+    padding: 20px;
+  }
+  #burger {
+    display: block;
+  }
+
+  .exibir {
+    transform: translateY(0);
+  }
+
+  #linha1 {
+    transition: 1s;
+  }
+  #linha2,
+  #linha3 {
+    transition: 0.5s;
+  }
+  .linha1Action {
+    transform: translateY(6px) rotate(765deg);
+  }
+  .linha2Action {
+    transform: rotate(45deg);
+  }
+  .linha3Action {
+    transform: translateY(-6px) rotate(315deg);
+  }
+}
